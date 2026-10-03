@@ -1,0 +1,108 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0x644B994c873351AFcc383eF8c579AA3813DF7b30",
+  "source_sha256": "e7465a352f7cfb2f9309e409faf66119559bb77b991703397cf9cfa8f7e340b3",
+  "exact_source_match": true,
+  "fixture_revision": "dd66c429edbad3aa78ee2d55fb5274954d420316",
+  "transactions": [
+    {
+      "action": "deploy",
+      "hash": "0x228f886088ef6665129ec4fe3e8722c8d1da42e4a3cecdf6f273e5859c6fc4c9"
+    },
+    {
+      "action": "compare",
+      "left": 0,
+      "right": 1,
+      "hash": "0xc41270aeca4c657eb58e33ed5e6e96065ceac4aec8981c8e85a334e0a5425ce3"
+    },
+    {
+      "action": "finalize",
+      "hash": "0xb184cc679e9d875c76b61c8068e255877f1b51feb372b768b6e22d9681844433"
+    }
+  ],
+  "state": {
+    "comparisons": [
+      {
+        "judgments": [
+          {
+            "criterion": "offline",
+            "decision": "UNRESOLVED",
+            "left_quote": "With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.",
+            "right_quote": "This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified."
+          },
+          {
+            "criterion": "recovery",
+            "decision": "UNRESOLVED",
+            "left_quote": "After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention.",
+            "right_quote": "This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified."
+          },
+          {
+            "criterion": "exchange",
+            "decision": "UNRESOLVED",
+            "left_quote": "The editor imports and exports both CSV and JSON files while preserving their field schema and value types.",
+            "right_quote": "This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified."
+          }
+        ],
+        "left": 0,
+        "right": 1,
+        "source_hashes": [
+          "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5",
+          "5edde8e4e5405f14c4c23d7c37ca7df10c64540a1368c1fd07694fc42006fab0"
+        ]
+      }
+    ],
+    "completed": 1,
+    "configuration": {
+      "candidates": [
+        {
+          "name": "Alternative 0",
+          "sha256": "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/dominant.md"
+        },
+        {
+          "name": "Alternative 1",
+          "sha256": "5edde8e4e5405f14c4c23d7c37ca7df10c64540a1368c1fd07694fc42006fab0",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/unknown.md"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "offline",
+          "rule": "Compare current disconnected record access. Prefer create and edit records with later synchronization over read-only access to cached records; prefer cached reading over requiring a live connection for all access. If either source does not establish its capability, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "recovery",
+          "rule": "Compare recovery after an interrupted processing job. Prefer automatic resumption from a durable checkpoint over manual retry retaining completed work; prefer retained work over restarting from the beginning and discarding completed steps. If either source leaves recovery unspecified, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "exchange",
+          "rule": "Compare current interoperable file exchange. Prefer both CSV and JSON import and export preserving schema and types over CSV import and export alone; prefer CSV exchange over proprietary-only records with no CSV or JSON import or export. If either source leaves exchange unspecified, return UNRESOLVED. Equal established capability is TIE."
+        }
+      ]
+    },
+    "outcome": {
+      "comparison_root": "46055005b8c26b320ae0b07bb51446bc2387b315b5c5dd6d0aafcbac6e74f413",
+      "direct_strengths": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "status": "UNRESOLVED",
+      "strongest_paths": [],
+      "unresolved_pairs": [
+        [
+          0,
+          1
+        ]
+      ],
+      "winners": []
+    },
+    "required": 1
+  }
+}

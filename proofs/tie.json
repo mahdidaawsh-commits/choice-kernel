@@ -1,0 +1,115 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0x8B7F000007D6d5819D6cd5521241C8864A8b5DeC",
+  "source_sha256": "e7465a352f7cfb2f9309e409faf66119559bb77b991703397cf9cfa8f7e340b3",
+  "exact_source_match": true,
+  "fixture_revision": "dd66c429edbad3aa78ee2d55fb5274954d420316",
+  "transactions": [
+    {
+      "action": "deploy",
+      "hash": "0x7ebd3857f25a375f7fd99d0cd12db3fd69d45f726a8062de60453ccc94bc0c77"
+    },
+    {
+      "action": "compare",
+      "left": 0,
+      "right": 1,
+      "hash": "0x1cd90aa6b8af082f912d044232ca2cba3dfe8d09f0bb34ec16b3595209b57bb0"
+    },
+    {
+      "action": "finalize",
+      "hash": "0xfacd16675d6afe2ddfcd495598a9b7c582225158da612c3b8ea71911ca23f3ea"
+    }
+  ],
+  "state": {
+    "comparisons": [
+      {
+        "judgments": [
+          {
+            "criterion": "offline",
+            "decision": "TIE",
+            "left_quote": "With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.",
+            "right_quote": "With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection."
+          },
+          {
+            "criterion": "recovery",
+            "decision": "TIE",
+            "left_quote": "After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention.",
+            "right_quote": "After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention."
+          },
+          {
+            "criterion": "exchange",
+            "decision": "TIE",
+            "left_quote": "The editor imports and exports both CSV and JSON files while preserving their field schema and value types.",
+            "right_quote": "The editor imports and exports both CSV and JSON files while preserving their field schema and value types."
+          }
+        ],
+        "left": 0,
+        "right": 1,
+        "source_hashes": [
+          "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5",
+          "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5"
+        ]
+      }
+    ],
+    "completed": 1,
+    "configuration": {
+      "candidates": [
+        {
+          "name": "Alternative 0",
+          "sha256": "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/dominant.md"
+        },
+        {
+          "name": "Alternative 1",
+          "sha256": "550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/dominant.md"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "offline",
+          "rule": "Compare current disconnected record access. Prefer create and edit records with later synchronization over read-only access to cached records; prefer cached reading over requiring a live connection for all access. If either source does not establish its capability, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "recovery",
+          "rule": "Compare recovery after an interrupted processing job. Prefer automatic resumption from a durable checkpoint over manual retry retaining completed work; prefer retained work over restarting from the beginning and discarding completed steps. If either source leaves recovery unspecified, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "exchange",
+          "rule": "Compare current interoperable file exchange. Prefer both CSV and JSON import and export preserving schema and types over CSV import and export alone; prefer CSV exchange over proprietary-only records with no CSV or JSON import or export. If either source leaves exchange unspecified, return UNRESOLVED. Equal established capability is TIE."
+        }
+      ]
+    },
+    "outcome": {
+      "comparison_root": "372456374ede178fc40f3cea284190fa156b4aac87f62e409c6ce1f0903cada2",
+      "direct_strengths": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "status": "CO_WINNERS",
+      "strongest_paths": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "unresolved_pairs": [],
+      "winners": [
+        0,
+        1
+      ]
+    },
+    "required": 1
+  }
+}

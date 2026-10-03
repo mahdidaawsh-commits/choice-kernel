@@ -4,7 +4,7 @@ A standalone GenLayer comparison primitive: independently validated semantic com
 
 The deployer freezes 1–3 equally weighted preference criteria and 2–4 candidate documents. Anyone can compare an unfinished pair in any order. Every leader and validator fetches the complete commit-pinned documents and verifies SHA-256 bytes. Validators derive their own criterion decisions, require exact agreement on LEFT/RIGHT/TIE/UNRESOLVED, then check the leader's source anchors. Accepted comparisons cannot be overwritten.
 
-After every pair is recorded, anyone finalizes. A pair's directional strength is the number of criteria preferring that side, and only a strict majority creates an edge. The maximum bottleneck path matrix yields a winner set. Ties and cycles can produce co-winners. Any unresolved criterion blocks selection for the whole tournament. There is no owner override or arbitrary alphabetical tie-break.
+After every pair is recorded, anyone finalizes. A pair's directional strength is the number of criteria preferring that side; an edge exists only when that count exceeds the opposing count, with ties abstaining. The maximum bottleneck path matrix yields a winner set. Ties and cycles can produce co-winners. Any unresolved criterion blocks selection for the whole tournament. There is no owner override or arbitrary alphabetical tie-break.
 
 ## Files
 
@@ -22,9 +22,21 @@ genvm-lint download --version v0.2.16
 genvm-lint check contracts/choice_kernel.py --json
 pytest tests/direct/ -q
 npm install
+node scripts/verify-proofs.cjs
 ```
 
 The manual StudioNet workflow runs the official GenLayer CLI with an ephemeral gasless account. It verifies execution success, finalized consensus, exact deployed source, all stored decisions and resulting winner sets; sanitized receipts are uploaded as an artifact.
+
+## Contract interface
+
+| Entry point | Input and behavior |
+| --- | --- |
+| Constructor | JSON arrays: criteria `{id,rule}` and candidates `{name,url,sha256}`. See `config/criteria.json`; URLs must reference a full 40-character Git commit. |
+| `compare(left,right)` | Candidate indexes with `0 <= left < right < n`. Independently evaluate that unfinished pair. |
+| `finalize()` | Require every pair and freeze the terminal result. No AI call occurs here. |
+| `get_state()` | Configuration, completion count, all accepted source-linked judgments and final matrices. |
+
+For a three-candidate tournament, call `compare(0,1)`, `compare(0,2)` and `compare(1,2)` in any order, then `finalize()`. New documentation or changed criteria require a new deployment. The public proof workflow targets **StudioNet, chain 61999**, a gasless testing environment, not a production deployment.
 
 ## Scope
 

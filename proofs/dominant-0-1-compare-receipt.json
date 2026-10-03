@@ -1,0 +1,189 @@
+{
+  "hash": "0x4dfb90ac6feafb31a4f8ae7192e8e543426d874f7d31545076441a7cd5d54897",
+  "from_address": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "to_address": "0xF01aE4f00a88e70219A7AcBBE66ca1df7fAdf0f3",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[0,1,]\"method\":\"compare\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "idle"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[0,1,]\"method\":\"compare\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"judgments\":[{\"criterion\":\"offline\"\"decision\":\"LEFT\"\"left_quote\":\"With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.\"\"right_quote\":\"The editor requires a live network connection for all record access, including reading existing records.\"},{\"criterion\":\"recovery\"\"decision\":\"LEFT\"\"left_quote\":\"After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention.\"\"right_quote\":\"After an interrupted processing job, operators must restart the entire job from the beginning; prior completed steps are discarded.\"},{\"criterion\":\"exchange\"\"decision\":\"LEFT\"\"left_quote\":\"The editor imports and exports both CSV and JSON files while preserving their field schema and value types.\"\"right_quote\":\"The editor stores records in its proprietary format. It provides no import or export of CSV or JSON files.\"},]\"source_hashes\":[\"550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5\",\"1be2944d73e4dc993e13be72a72d6b272493e16f03a2fdbcf429b782a36fd6ba\",]}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree",
+        "calldata": {
+          "readable": "{\"args\":[0,1,]\"method\":\"compare\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      }
+    ]
+  },
+  "gaslimit": 6,
+  "nonce": 6,
+  "created_at": "2026-10-03T15:36:14.852768+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9014806808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b8e427241a99000000000000000000000000216a496c01ab4e958e95b98197bcaec8ccb2d72a000000000000000000000000f01ae4f00a88e70219a7acbbe66ca1df7fadf0f30000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001bda98160461726773150109066d6574686f643c636f6d706172650000000000008301e481a0657d860d801927ed3457ae45421da2bceb6649756ab44422f89bb76fccfab24ca008c08bad4ff5f1097e90d702079487f3697f0b12f2517c2a39cd48f4d12d443d"
+  },
+  "value_credited": false,
+  "sender": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "recipient": "0xF01aE4f00a88e70219A7AcBBE66ca1df7fAdf0f3",
+  "tx_id": "0x4dfb90ac6feafb31a4f8ae7192e8e543426d874f7d31545076441a7cd5d54897",
+  "activator": "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+  "last_leader": "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658",
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8"
+    ],
+    "validator_votes_hash": [
+      "0x7b18bc648ddd701571c17452b793e105e46a4f20f90ce28aeb21390bbb3f6a02",
+      "0xec081987f9f9b43f819c5b8c084a2b412ac79bca71ea1fde204d8b4aec98cd26",
+      "0xc0cc7670f29b6aa113e2675ef65494e4bc150abfc083485d9216525074cfb203",
+      "0xf51dcd5ee04115589f90667a779f476bb66e5a038688d38ffdd75bc72e11bb67",
+      "0x9ba944fa437385a8ae4b4d498fd1369dc9a5d3f4adc9cda13612b4667c13cc2d"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      5,
+      5
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "IDLE",
+      "IDLE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

@@ -1,0 +1,184 @@
+{
+  "hash": "0xc41270aeca4c657eb58e33ed5e6e96065ceac4aec8981c8e85a334e0a5425ce3",
+  "from_address": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "to_address": "0x644B994c873351AFcc383eF8c579AA3813DF7b30",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[0,1,]\"method\":\"compare\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[0,1,]\"method\":\"compare\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"judgments\":[{\"criterion\":\"offline\"\"decision\":\"UNRESOLVED\"\"left_quote\":\"With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.\"\"right_quote\":\"This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified.\"},{\"criterion\":\"recovery\"\"decision\":\"UNRESOLVED\"\"left_quote\":\"After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention.\"\"right_quote\":\"This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified.\"},{\"criterion\":\"exchange\"\"decision\":\"UNRESOLVED\"\"left_quote\":\"The editor imports and exports both CSV and JSON files while preserving their field schema and value types.\"\"right_quote\":\"This release brochure gives no operational information about offline record access, job recovery or interoperable file exchange. Those capabilities are not specified.\"},]\"source_hashes\":[\"550a48c58f2b437d217743f2fcf8875442814d67245e89f872ad67ca1db21ea5\",\"5edde8e4e5405f14c4c23d7c37ca7df10c64540a1368c1fd07694fc42006fab0\",]}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle",
+        "result": {
+          "status": "contract_error",
+          "payload": "idle"
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      }
+    ]
+  },
+  "gaslimit": 12,
+  "nonce": 12,
+  "created_at": "2026-10-03T15:40:37.152588+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf901480c808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b8e427241a99000000000000000000000000216a496c01ab4e958e95b98197bcaec8ccb2d72a000000000000000000000000644b994c873351afcc383ef8c579aa3813df7b300000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001bda98160461726773150109066d6574686f643c636f6d706172650000000000008301e481a0d2136d8164b4571399b405668f4c4b59c94c46dacad39cd1b69fd731c0664e68a02e7924ce01b819ead392867fb9476fcf11950f3f236a72c6d4713e2da879f9ce"
+  },
+  "value_credited": false,
+  "sender": "0x216A496c01aB4E958e95b98197bCAeC8ccB2d72A",
+  "recipient": "0x644B994c873351AFcc383eF8c579AA3813DF7b30",
+  "tx_id": "0xc41270aeca4c657eb58e33ed5e6e96065ceac4aec8981c8e85a334e0a5425ce3",
+  "activator": "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+  "last_leader": "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2",
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE"
+    ],
+    "validator_votes_hash": [
+      "0x9e87e0cfe0217da3372b300e4aac2423069c945806902245f5b1542582f47a0e",
+      "0x4839a9e611f546fa73b4b605c59a83ea5b269e1e725b7b476e0135c740b692dc",
+      "0x97eec5a452dcd33e271347c28699ede28d557219dcc12f6c631e49e323678f9a",
+      "0x1be80c22ccb566ad428359ebf6c9ea65e26ae510548a14ad8164da86129c81fb",
+      "0xe74cd6ea960c324b8446d6362c5dd958f1d17a374d218a6067bad0e395a0226c"
+    ],
+    "validator_votes": [
+      5,
+      5,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

@@ -1,0 +1,203 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0xdA2A81E90516562025B4e0E5392e48370Df9BF95",
+  "source_sha256": "e7465a352f7cfb2f9309e409faf66119559bb77b991703397cf9cfa8f7e340b3",
+  "exact_source_match": true,
+  "fixture_revision": "dd66c429edbad3aa78ee2d55fb5274954d420316",
+  "transactions": [
+    {
+      "action": "deploy",
+      "hash": "0xbaa5f8e4676b241da5c50ad7ee187425cb420b8ff129da615c65a46838032b5f"
+    },
+    {
+      "action": "compare",
+      "left": 0,
+      "right": 1,
+      "hash": "0x562c8efe7ca1d98c9d5b8aaab4e0f61e0917b632911ad57353eed6d78b8108c1"
+    },
+    {
+      "action": "compare",
+      "left": 0,
+      "right": 2,
+      "hash": "0xdb0d46d0d5e5d5b2a88ede5daeca5f1e5e0fa918c2c21e0f1969658187955945"
+    },
+    {
+      "action": "compare",
+      "left": 1,
+      "right": 2,
+      "hash": "0x04b9a02d14a9155d249cc507cd534c1e069c28a0b1ee3c0a664dfa40a978a090"
+    },
+    {
+      "action": "finalize",
+      "hash": "0x487cfa7fcf0227e3b62480b8b25e38decf764e17df25408c37cfc2c219738895"
+    }
+  ],
+  "state": {
+    "comparisons": [
+      {
+        "judgments": [
+          {
+            "criterion": "offline",
+            "decision": "LEFT",
+            "left_quote": "With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.",
+            "right_quote": "With the network disconnected, operators can read cached records but cannot create or edit records."
+          },
+          {
+            "criterion": "recovery",
+            "decision": "RIGHT",
+            "left_quote": "After an interrupted processing job, operators must restart the entire job from the beginning; prior completed steps are discarded.",
+            "right_quote": "After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention."
+          },
+          {
+            "criterion": "exchange",
+            "decision": "LEFT",
+            "left_quote": "The editor imports and exports CSV files. It does not support JSON import or export.",
+            "right_quote": "It provides no import or export of CSV or JSON files."
+          }
+        ],
+        "left": 0,
+        "right": 1,
+        "source_hashes": [
+          "3f4b0b7a2e9bc19efd98e479c5c1f9fab4db63a2a82469bfcba8ae10b5eb3054",
+          "71f3d26128cfef0613378b93c8d0908770a882470accf2b7c4ddd7b22a3d8aa7"
+        ]
+      },
+      {
+        "judgments": [
+          {
+            "criterion": "offline",
+            "decision": "LEFT",
+            "left_quote": "With the network disconnected, operators can create and edit records. The editor syncs those changes after reconnection.",
+            "right_quote": "The editor requires a live network connection for all record access, including reading existing records."
+          },
+          {
+            "criterion": "recovery",
+            "decision": "RIGHT",
+            "left_quote": "After an interrupted processing job, operators must restart the entire job from the beginning; prior completed steps are discarded.",
+            "right_quote": "After an interrupted processing job, an operator can manually retry the job while retaining all completed steps."
+          },
+          {
+            "criterion": "exchange",
+            "decision": "RIGHT",
+            "left_quote": "The editor imports and exports CSV files. It does not support JSON import or export.",
+            "right_quote": "The editor imports and exports both CSV and JSON files while preserving their field schema and value types."
+          }
+        ],
+        "left": 0,
+        "right": 2,
+        "source_hashes": [
+          "3f4b0b7a2e9bc19efd98e479c5c1f9fab4db63a2a82469bfcba8ae10b5eb3054",
+          "1bfd01ff991294618f8a248af08412722564e66f95f09226dc94630498af07de"
+        ]
+      },
+      {
+        "judgments": [
+          {
+            "criterion": "offline",
+            "decision": "LEFT",
+            "left_quote": "With the network disconnected, operators can read cached records but cannot create or edit records.",
+            "right_quote": "The editor requires a live network connection for all record access, including reading existing records."
+          },
+          {
+            "criterion": "recovery",
+            "decision": "LEFT",
+            "left_quote": "After an interrupted processing job, the editor automatically resumes from its last durable checkpoint without operator intervention.",
+            "right_quote": "After an interrupted processing job, an operator can manually retry the job while retaining all completed steps."
+          },
+          {
+            "criterion": "exchange",
+            "decision": "RIGHT",
+            "left_quote": "The editor stores records in its proprietary format. It provides no import or export of CSV or JSON files.",
+            "right_quote": "The editor imports and exports both CSV and JSON files while preserving their field schema and value types."
+          }
+        ],
+        "left": 1,
+        "right": 2,
+        "source_hashes": [
+          "71f3d26128cfef0613378b93c8d0908770a882470accf2b7c4ddd7b22a3d8aa7",
+          "1bfd01ff991294618f8a248af08412722564e66f95f09226dc94630498af07de"
+        ]
+      }
+    ],
+    "completed": 3,
+    "configuration": {
+      "candidates": [
+        {
+          "name": "Alternative 0",
+          "sha256": "3f4b0b7a2e9bc19efd98e479c5c1f9fab4db63a2a82469bfcba8ae10b5eb3054",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/alder.md"
+        },
+        {
+          "name": "Alternative 1",
+          "sha256": "71f3d26128cfef0613378b93c8d0908770a882470accf2b7c4ddd7b22a3d8aa7",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/birch.md"
+        },
+        {
+          "name": "Alternative 2",
+          "sha256": "1bfd01ff991294618f8a248af08412722564e66f95f09226dc94630498af07de",
+          "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/choice-kernel/dd66c429edbad3aa78ee2d55fb5274954d420316/fixtures/cedar.md"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "offline",
+          "rule": "Compare current disconnected record access. Prefer create and edit records with later synchronization over read-only access to cached records; prefer cached reading over requiring a live connection for all access. If either source does not establish its capability, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "recovery",
+          "rule": "Compare recovery after an interrupted processing job. Prefer automatic resumption from a durable checkpoint over manual retry retaining completed work; prefer retained work over restarting from the beginning and discarding completed steps. If either source leaves recovery unspecified, return UNRESOLVED. Equal established capability is TIE."
+        },
+        {
+          "id": "exchange",
+          "rule": "Compare current interoperable file exchange. Prefer both CSV and JSON import and export preserving schema and types over CSV import and export alone; prefer CSV exchange over proprietary-only records with no CSV or JSON import or export. If either source leaves exchange unspecified, return UNRESOLVED. Equal established capability is TIE."
+        }
+      ]
+    },
+    "outcome": {
+      "comparison_root": "2b37b502cf927966ea7b91f8acdeb6ea839d45b124273676c0a534f09eb83342",
+      "direct_strengths": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "CO_WINNERS",
+      "strongest_paths": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "unresolved_pairs": [],
+      "winners": [
+        0,
+        1,
+        2
+      ]
+    },
+    "required": 3
+  }
+}
