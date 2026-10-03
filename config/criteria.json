@@ -1,0 +1,5 @@
+[
+  {"id":"offline","rule":"Compare current disconnected record access. Prefer create and edit records with later synchronization over read-only access to cached records; prefer cached reading over requiring a live connection for all access. If either source does not establish its capability, return UNRESOLVED. Equal established capability is TIE."},
+  {"id":"recovery","rule":"Compare recovery after an interrupted processing job. Prefer automatic resumption from a durable checkpoint over manual retry retaining completed work; prefer retained work over restarting from the beginning and discarding completed steps. If either source leaves recovery unspecified, return UNRESOLVED. Equal established capability is TIE."},
+  {"id":"exchange","rule":"Compare current interoperable file exchange. Prefer both CSV and JSON import and export preserving schema and types over CSV import and export alone; prefer CSV exchange over proprietary-only records with no CSV or JSON import or export. If either source leaves exchange unspecified, return UNRESOLVED. Equal established capability is TIE."}
+]
